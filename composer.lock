@@ -30,7 +30,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "GrahamCampbell\\ResultType\\": "src/"
+                    "GrahamCampbell\\ResultType\\": "App/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -112,7 +112,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "PHPMailer\\PHPMailer\\": "src/"
+                    "PHPMailer\\PHPMailer\\": "App/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -182,7 +182,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "PhpOption\\": "src/PhpOption/"
+                    "PhpOption\\": "App/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

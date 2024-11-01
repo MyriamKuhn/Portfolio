@@ -2,7 +2,7 @@
     "name": "myria/portfolio",
     "autoload": {
         "psr-4": {
-            "Myria\\Portfolio\\": "src/"
+            "Myria\\Portfolio\\": "App/"
         }
     },
     "authors": [
