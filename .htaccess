@@ -22,3 +22,7 @@ RewriteRule ^fr$ / [L,R=301]
 # Redirection pour les utilisateurs qui accèdent à /en
 RewriteCond %{REQUEST_URI} ^/en$
 RewriteRule ^en$ / [L,R=301]
+
+# Redirection pour les utilisateurs qui accèdent à /en
+RewriteCond %{REQUEST_URI} ^/de$
+RewriteRule ^de$ / [L,R=301]

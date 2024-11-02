@@ -1,0 +1,30 @@
+#language-selector
+  position: fixed
+  top: 15%
+  z-index: 1200
+  display: flex
+  left: -100px
+  transition: 0.5s
+
+.language-picker
+  width: 100px
+  padding: 15px
+  background-color: #181818
+  border-radius: 15px
+  font-family: "Open Sans", sans-serif
+  font-weight: 500
+
+.setting-button 
+  padding: 5px
+
+.setting-button i 
+  display: flex
+  justify-content: center
+  align-items: center
+  animation: rotate 2s ease-out infinite alternate
+
+@keyframes rotate 
+  from
+    transform: rotate(0deg)
+  to 
+    transform: rotate(360deg)

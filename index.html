@@ -56,11 +56,6 @@
             </ul>
           </div>
         </div>
-        <!-- Ajout du sélecteur de langue -->
-        <div id="language-selector" class="ms-auto">
-          <button id="fr-button" class="lang-button" aria-label="Changer la langue en Français">Français</button>
-          <button id="en-button" class="lang-button" aria-label="Change language to English">English</button>
-        </div>
       </nav>
     </header>
     <!-- END : Header -->
@@ -415,43 +410,61 @@
       </section>
 
       <!-- Back To Top -->
-      <button class="btn btn-outline-primary scroll-top" id="scrollTopButton" aria-label="Retour en haut de la page">
+      <button class="btn btn-outline-primary scroll-top" id="scrollTopButton" data-translate-aria="scroll">
         <i class="bi bi-chevron-up"></i>
       </button>
+
+      <!-- Ajout du sélecteur de langue -->
+      <div id="language-selector">
+        <div class="language-picker d-flex flex-column align-items-center">
+          <button id="fr-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center mb-2" aria-label="Changer la langue en Français">FR</button>
+          <button id="en-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center mb-2" aria-label="Change language to English">EN</button>
+          <button id="de-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center" aria-label="Sprache in Deutsch ändern">DE</button>
+        </div>
+        <div class="setting-button">
+          <button class="btn btn-outline-primary" id="showPanelButton" aria-controls="settingsPanel" aria-expanded="false" data-translate-aria="languages">
+            <i class="bi bi-gear-fill"></i>
+          </button>
+        </div>
+      </div>
+
     </main>
     <!-- END : Main -->
 
     <!-- START : Footer -->
     <footer class="text-center footer-page py-4">
       <div class="my-3">
-        <nav aria-label="Liens vers les réseaux sociaux">
-          <a class="me-2 btn btn-outline-primary" href="https://www.linkedin.com/in/myriam-k%C3%BChn/" target="_blank" aria-label="Lien vers LinkedIn">
+        <nav aria-label="Liens vers les réseaux sociaux" class="d-flex justify-content-center">
+          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://github.com/MyriamKuhn" target="_blank" data-translate-aria="github">
+            <i class="bi bi-github"></i>
+          </a>
+          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://www.linkedin.com/in/myriam-k%C3%BChn/" target="_blank" data-translate-aria="linkedin">
             <i class="bi bi-linkedin"></i>
           </a>
-          <a class="me-2 btn btn-outline-primary" href="https://www.facebook.com/myriam.kuhn.9" target="_blank" aria-label="Lien vers Facebook">
+          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://www.facebook.com/myriam.kuhn.9" target="_blank" data-translate-aria="facebook">
             <i class="bi bi-facebook"></i>
           </a>
-          <a class="me-2 btn btn-outline-primary" href="https://x.com/mimkuhn" target="_blank" aria-label="Lien vers Twitter">
+          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://x.com/mimkuhn" target="_blank" data-translate-aria="twitter">
             <i class="bi bi-twitter-x"></i>
           </a>
-          <a class="me-2 btn btn-outline-primary" href="https://www.instagram.com/myriam_kuhn82/" target="_blank" aria-label="Lien vers Instagram">
+          <a class="btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://www.instagram.com/myriam_kuhn82/" target="_blank" data-translate-aria="instagram">
             <i class="bi bi-instagram"></i>
           </a>
         </nav>
       </div>
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-key="footer">
         ©2024 Myrian Kühn - Tous droits réservés
       </div>
       <div class="text-center">
         <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="Protégé par reCAPTCHA" width="25">
-        <p class="fs-6 m-0">Ce site est protégé par reCAPTCHA.</p>
-        <a href="https://www.google.com/intl/fr/policies/privacy/" target="_blank" rel="noopener noreferrer">Confidentialité</a> - 
-        <a href="https://www.google.com/intl/fr/policies/terms/" target="_blank" rel="noopener noreferrer">Conditions</a>
+        <p data-key="protected" class="fs-6 m-0">Ce site est protégé par reCAPTCHA.</p>
+        <a href="https://www.google.com/intl/fr/policies/privacy/" target="_blank" rel="noopener noreferrer" data-key="confidency">Confidentialité</a> - 
+        <a href="https://www.google.com/intl/fr/policies/terms/" target="_blank" rel="noopener noreferrer" data-key="conditions">Conditions</a>
       </div>
     </footer>
     <!-- END : Footer -->
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
   </body>
 </html>
