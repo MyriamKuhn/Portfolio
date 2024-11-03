@@ -167,6 +167,15 @@ function changeLanguage(lang) {
 		}
 	});
 
+	// Mise à jour des attributs alt
+	const altElements = document.querySelectorAll('[data-translate-alt]');
+	altElements.forEach(element => {
+		const altKey = element.getAttribute('data-translate-alt');
+		if (translations[lang].altTexts[altKey]) {
+			element.setAttribute('alt', translations[lang].altTexts[altKey]);
+		}
+	});
+
 	// Modification du style des boutons
 	const frButton = document.getElementById('fr-button');
 	const enButton = document.getElementById('en-button');

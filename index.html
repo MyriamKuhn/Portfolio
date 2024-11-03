@@ -48,6 +48,9 @@
                 <a class="nav-link text-uppercase" href="#competences" data-key="skills">Compétences</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#competences-adds" data-key="skillAdds">Compétences complémentaires</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link text-uppercase" href="#realisations" data-key="projects">Réalisations</a>
               </li>
               <li class="nav-item">
@@ -87,7 +90,7 @@
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 align-items-center mb-5 pt-5 pb-5">
             <div>
-              <img class="about-img" src="/assets/img/img_moi.png" alt="Portrait de Myriam Kühn, développeuse web full-stack">
+              <img class="about-img" src="/assets/img/img_moi.png" data-translate-alt="aboutImg">
             </div>
             <div class="pt-2 pb-2">
               <h2 data-key="about">Qui suis-je ?</h2>
@@ -123,34 +126,26 @@
         </div>
       </section>
 
-      <!-- Mes compétences -->
+      <!-- MES COMPETENCES -->
       <section class="py-5" id="competences">
         <div class="container">
           <div class="row text-center mt-5 mb-5">
-            <h2>Mes compétences</h2>
-            <p class="text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <h2 data-key="competencesTitle">Mes compétences</h2>
+            <p data-key="competencesDesc">
+              Avec un bagage technique solide et une soif d'apprendre, je suis prête à relever les défis du développement moderne.
             </p>
-            <div
-              class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-4 all-competences"
-            >
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-4 competences-card">
+              <!-- HTML -->
               <div class="p-3">
-                <div class="card bg-dark p-3 border-light h-100">
-                  <img
-                    src="./img/Csharp_Logo.png"
-                    class="card-img-top m-auto"
-                  />
-                  <div
-                    class="card-body d-flex flex-column justify-content-end p-5"
-                  >
-                    <h5 class="card-title">C# .net</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/html5.svg" class="mx-auto my-3" data-translate-alt="htmlImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">HTML5</h5>
+                    <p class="card-text" data-key="htmlDesc">
+                      Maîtrise des éléments sémantiques et des API modernes, permettant de créer des pages web accessibles et interactives.
                     </p>
                   </div>
-                  <div class="card-footer text-danger">
+                  <div class="card-footer text-secondary">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -159,46 +154,17 @@
                   </div>
                 </div>
               </div>
+              <!-- CSS -->
               <div class="p-3">
-                <div class="card bg-dark p-3 border-light h-100">
-                  <img
-                    src="./img/HTML5_logo_and_wordmark.svg.png"
-                    class="card-img-top m-auto"
-                  />
-                  <div
-                    class="card-body d-flex flex-column justify-content-end p-5"
-                  >
-                    <h5 class="card-title">HTML</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/css3.svg" class="mx-auto my-3" data-translate-alt="cssImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">CSS3</h5>
+                    <p class="card-text" data-key="cssDesc">
+                      Expertise dans la création de designs responsives et adaptatifs grâce à CSS3, en utilisant des propriétés avancées, des transitions et des animations pour enrichir l'expérience utilisateur. Maîtrise des préprocesseurs comme SASS pour structurer le code CSS de manière modulaire, garantissant ainsi une gestion efficace des styles.
                     </p>
                   </div>
-                  <div class="card-footer text-danger">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="p-3">
-                <div class="card bg-dark p-3 border-light h-100">
-                  <img
-                    src="./img/logo-2582747_640.png"
-                    class="card-img-top m-auto"
-                  />
-                  <div
-                    class="card-body d-flex flex-column justify-content-end p-5"
-                  >
-                    <h5 class="card-title">CSS</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
-                  <div class="card-footer text-danger">
+                  <div class="card-footer text-secondary">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -207,22 +173,74 @@
                   </div>
                 </div>
               </div>
+              <!-- SASS -->
               <div class="p-3">
-                <div class="card bg-dark p-3 border-light h-100">
-                  <img
-                    src="./img/wordpress-6942722_640.png"
-                    class="card-img-top m-auto"
-                  />
-                  <div
-                    class="card-body d-flex flex-column justify-content-end p-5"
-                  >
-                    <h5 class="card-title">Wordpress</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/sass.svg" class="mx-auto my-3" data-translate-alt="sassImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Sass</h5>
+                    <p class="card-text" data-key="sassDesc">
+                      Utilisation de SASS pour structurer et organiser le code CSS de manière modulaire, facilitant la maintenance et l'évolutivité.
                     </p>
                   </div>
-                  <div class="card-footer text-danger">
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- JS -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/js.png" class="mx-auto my-3" data-translate-alt="jsImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">JavaScript</h5>
+                    <p class="card-text" data-key="javascriptDesc">
+                      Solide compréhension des concepts fondamentaux de JavaScript, y compris les fonctions, les objets et les tableaux, permettant de créer des applications web interactives. Capacité à manipuler le DOM et à gérer les événements utilisateur, tout en intégrant des opérations asynchrones et des API RESTful pour enrichir les fonctionnalités des applications.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- BOOTSTRAP -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/bootstrap.svg" class="mx-auto my-3" data-translate-alt="bootstrapImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Bootstrap 5.3</h5>
+                    <p class="card-text" data-key="bootstrapDesc">
+                      Expertise dans l'utilisation de Bootstrap pour créer des interfaces utilisateur réactives et modernes. Capacité à tirer parti des composants et des utilitaires de Bootstrap pour accélérer le développement tout en assurant une expérience utilisateur cohérente sur tous les appareils.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- THREE.JS -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/threejs.svg" class="mx-auto my-3" data-translate-alt="threejsImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Three.js</h5>
+                    <p class="card-text" data-key="threejsDesc">
+                      Maîtrise de Three.js pour créer des expériences 3D interactives et immersives sur le web. Capacité à modéliser des environnements 3D, à intégrer des animations et à optimiser les performances pour des rendus fluides.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -231,22 +249,93 @@
                   </div>
                 </div>
               </div>
+              <!-- PHASER -->
               <div class="p-3">
-                <div class="card bg-dark p-3 border-light h-100">
-                  <img
-                    src="./img/React-icon.svg.png"
-                    class="card-img-top m-auto"
-                  />
-                  <div
-                    class="card-body d-flex flex-column justify-content-end p-5"
-                  >
-                    <h5 class="card-title">React</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/phaser.png" class="mx-auto my-3" data-translate-alt="phaserImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">PHASER</h5>
+                    <p class="card-text" data-key="phaserDesc">
+                      Expertise dans l'utilisation de Phaser pour développer des jeux 2D dynamiques et engageants. Capacité à intégrer des mécaniques de jeu, des animations fluides et des interactions utilisateur, tout en optimisant les performances pour une expérience de jeu fluide.
                     </p>
                   </div>
-                  <div class="card-footer text-danger">
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- PHP -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/php.svg" class="mx-auto my-3" data-translate-alt="phpImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">PHP</h5>
+                    <p class="card-text" data-key="phpDesc">
+                      Maîtrise de PHP pour le développement d'applications web dynamiques et évolutives. Capacité à créer des systèmes robustes, à intégrer et développer des API RESTful, à gérer les sessions utilisateur, et à assurer la sécurité des données, tout en appliquant les meilleures pratiques du secteur.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- SQL -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/mysql.svg" class="mx-auto my-3" data-translate-alt="mysqlImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">MySQL</h5>
+                    <p class="card-text" data-key="mysqlDesc">
+                      Compétence dans l'utilisation de MySQL pour la gestion et l'interrogation de bases de données relationnelles. Capacité à concevoir des schémas de données, à optimiser les requêtes et à assurer l'intégrité des données, tout en mettant en œuvre des pratiques de sécurité adaptées.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- MongoDB -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/mongodb.svg" class="mx-auto my-3" data-translate-alt="mongodbImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Mongo DB</h5>
+                    <p class="card-text" data-key="mongodbDesc">
+                      Expertise dans l'utilisation de MongoDB pour le développement d'applications basées sur des bases de données NoSQL. Capacité à concevoir des schémas flexibles, à effectuer des requêtes complexes et à gérer des ensembles de données volumineux, tout en garantissant la performance et la scalabilité des applications.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- WORDPRESS -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/wordpress.svg" class="mx-auto my-3" data-translate-alt="wordpressImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">WordPress</h5>
+                    <p class="card-text" data-key="wordpressDesc">
+                      Maîtrise de WordPress pour la création et la gestion de sites web dynamiques et personnalisables. Capacité à développer des thèmes et des plugins sur mesure, à optimiser les performances SEO et à garantir une expérience utilisateur fluide et engageante.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -255,26 +344,21 @@
                   </div>
                 </div>
               </div>
+              <!-- UE5 -->
               <div class="p-3">
-                <div class="card bg-dark p-3 border-light h-100">
-                  <img
-                    src="./img/ci-cd-devops-cycle-1920w.png"
-                    class="card-img-top m-auto"
-                  />
-                  <div
-                    class="card-body d-flex flex-column justify-content-end p-5"
-                  >
-                    <h5 class="card-title">DevOps</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/ue5.svg" class="mx-auto my-3" data-translate-alt="ueImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Unreal Engine 5</h5>
+                    <p class="card-text" data-key="ueDesc">
+                      Expertise dans l'utilisation d'Unreal Engine 5 pour le développement de jeux vidéo haut de gamme et d'expériences interactives. Capacité à tirer parti des fonctionnalités avancées telles que le rendu en temps réel, le système de particules et le Blueprint Visual Scripting pour créer des environnements immersifs et des mécaniques de jeu captivantes.
                     </p>
                   </div>
-                  <div class="card-footer text-danger">
+                  <div class="card-footer text-secondary">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star-half"></i>
                     <i class="bi bi-star"></i>
                   </div>
                 </div>
@@ -287,10 +371,275 @@
       <!-- Dispo -->
       <section class="py-5 text-center" id="available">
         <div class="py-3">
-          <h2 class="pb-3">Je suis disponible en tant que Freelance</h2>
-          <p>
-            <button class="btn btn-danger">M'embaucher</button>
+          <h2 class="pb-3" data-key="availableTitle">Je suis disponible</h2>
+          <p data-key="availableDesc1">
+            Je suis actuellement disponible pour des opportunités d'embauche en entreprise ainsi que pour des missions freelance.
           </p>
+          <p data-key="availableDesc2">
+            N'hésitez pas à me contacter pour discuter de vos besoins en développement.
+          </p>
+          <a class="btn btn-primary text-uppercase fw-medium mt-5 text-light" href="#contact" data-key="contactTitle">Me contacter</a>
+        </div>
+      </section>
+
+      <!-- Compétences complémentaires -->
+      <section class="py-5" id="competences-adds">
+        <div class="container">
+          <div class="row text-center mt-5 mb-5">
+            <h2 data-key="competencesAddsTitle">Mes compétences complémentaires</h2>
+            <p data-key="competencesAddsDesc">
+              En plus de mes compétences techniques, je maîtrise divers outils et logiciels qui enrichissent mes projets et facilitent la collaboration.
+            </p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-4 competences-card">
+              <!-- GIT -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/git.svg" class="mx-auto my-3" data-translate-alt="gitImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Git</h5>
+                    <p class="card-text" data-key="gitDesc">
+                      Compétence dans l'utilisation de Git pour le contrôle de version, permettant de gérer les modifications de code de manière collaborative et efficace. Expérience avec des plateformes telles que GitHub pour le partage de projets.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- TRELLO -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/trello.svg" class="mx-auto my-3" data-translate-alt="trelloImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Trello</h5>
+                    <p class="card-text" data-key="trelloDesc">
+                      Utilisation de Trello pour la gestion de projets, permettant une organisation visuelle des tâches et une collaboration efficace au sein d'une équipe.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- JIRA -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/jira.png" class="mx-auto my-3" data-translate-alt="jiraImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Jira</h5>
+                    <p class="card-text" data-key="jiraDesc">
+                      Expérience dans l'utilisation de Jira pour le suivi des tickets et la gestion agile de projets, facilitant la communication et le suivi des progrès.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- FIGMA -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/figma.svg" class="mx-auto my-3" data-translate-alt="figmaImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Figma</h5>
+                    <p class="card-text" data-key="figmaDesc">
+                      Compétence dans Figma pour la conception d'interfaces utilisateur, permettant de créer des prototypes interactifs et des designs collaboratifs.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- PHOTOSHOP -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/ps.svg" class="mx-auto my-3" data-translate-alt="photoshopImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Photoshop</h5>
+                    <p class="card-text" data-key="photoshopDesc">
+                      Compétence avancée en retouche photo, création de compositions graphiques et manipulation d'images pour des visuels percutants.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- ILLUSTRATOR -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/illustrator.svg" class="mx-auto my-3" data-translate-alt="illustratorImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Illustrator</h5>
+                    <p class="card-text" data-key="illustratorDesc">
+                      Maîtrise de la création de graphiques vectoriels, de logos et d'illustrations personnalisées, permettant une grande flexibilité de design.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- INDESIGN -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/indesign.svg" class="mx-auto my-3" data-translate-alt="indesignImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">InDesign</h5>
+                    <p class="card-text" data-key="indesignDesc">
+                      Utilisation d'InDesign pour la mise en page de documents imprimés et numériques, assurant une présentation professionnelle et cohérente.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- PREMIERE PRO -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/pp.svg" class="mx-auto my-3" data-translate-alt="ppImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Premiere Pro</h5>
+                    <p class="card-text" data-key="ppDesc">
+                      Compétence dans le montage vidéo et la création de contenus audiovisuels dynamiques, en utilisant des techniques avancées de montage.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- AFTER EFFECTS -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/ae.svg" class="mx-auto my-3" data-translate-alt="aeImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">After Effects</h5>
+                    <p class="card-text" data-key="aeDesc">
+                      Maîtrise de l'animation et des effets spéciaux pour la création de vidéos engageantes et de présentations dynamiques.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- BLENDER -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/blender.svg" class="mx-auto my-3" data-translate-alt="blenderImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Blender</h5>
+                    <p class="card-text" data-key="blenderDesc">
+                      Compétence dans la modélisation 3D et l'animation, permettant de créer des rendus réalistes et des projets interactifs.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- WORD -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/word.svg" class="mx-auto my-3" data-translate-alt="wordImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Microsoft Word</h5>
+                    <p class="card-text" data-key="wordDesc">
+                      Compétence dans la rédaction et la mise en forme de documents professionnels, facilitant la communication écrite et la documentation.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- EXCEL -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/excel.svg" class="mx-auto my-3" data-translate-alt="excelImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Microsoft Excel</h5>
+                    <p class="card-text" data-key="excelDesc">
+                      Maîtrise des outils d'analyse de données, des formules avancées et des graphiques, permettant une gestion efficace des informations.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- POWERPOINT -->
+              <div class="p-3">
+                <div class="card bg-dark text-light border-light h-100" role="article">
+                  <img src="/assets/img/powerp.svg" class="mx-auto my-3" data-translate-alt="powerpImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Microsoft PowerPoint</h5>
+                    <p class="card-text" data-key="powerpDesc">
+                      Compétence dans la création de présentations visuelles impactantes, en utilisant des mises en page efficaces et des éléments graphiques.
+                    </p>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
