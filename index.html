@@ -62,87 +62,61 @@
 
     <!-- START : Main -->
     <main class="main-content-website">
-      <!-- Accueil -->
-      <section id="hero">
+      
+      <!-- HERO -->
+      <section id="hero" aria-labelledby="hero-title">
         <div class="container-fluid">
           <div class="row row-cols-1 hero">
-            <div
-              class="d-flex justify-content-center flex-column text-center"
-              id="text-presentation"
-            >
-              <div class="text-bienvenue">Bienvenue !</div>
-              <div class="big-text">Je suis développeur</div>
-              <p class="description">
-                Je m'appelle Thomas, et je suis développeur depuis 2017. Depuis
-                2021, je fais aussi de la formation, mais tout ça, je vous en
-                parle plus ci-dessous....
+            <div class="d-flex justify-content-center flex-column align-items-center text-center hero-presentation">
+              <h1 id="hero-title" class="hero-name text-uppercase fw-medium">Myriam Kühn</h1>
+              <p class="hero-description m-0 text-center" data-key="heroDesc1">
+                Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans la  jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.
               </p>
-              <div class="btn-container">
-                <a
-                  href="/assets/docs/cv_myriamkuhn.pdf"
-                  target="_blank"
-                  class="btn btn-outline-danger"
-                  >Télécharger mon CV</a
-                >
-              </div>
-              <div class="" id="mouse-btn">
-                <a href="#about"><i class="bi bi-mouse"></i></a>
-              </div>
+              <p class="hero-description text-center mt-2" data-key="heroDesc2">
+                Venez découvrir mon portfolio !
+              </p>
+              <a href="/assets/docs/cv_myriamkuehn.pdf" target="_blank" class="btn btn-primary text-uppercase fw-medium mt-5 text-light" data-translate-aria="download" data-key="downloadBtn">Télécharger mon CV</a>
+              <a href="#about" class="hero-btn" data-translate-aria="nextSection"><i class="bi bi-arrow-down-short"></i></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Qui suis-je ? -->
+      <!-- QUI SUIS-JE ? -->
       <section class="py-5" id="about">
         <div class="container">
-          <div
-            class="row row-cols-1 row-cols-md-2 align-items-center mb-5 pt-5 pb-5"
-          >
+          <div class="row row-cols-1 row-cols-md-2 align-items-center mb-5 pt-5 pb-5">
             <div>
-              <img
-                class="img-thumbnail"
-                src="./img/man.jpg"
-                style="max-width: 100%"
-              />
+              <img class="about-img" src="/assets/img/img_moi.png" alt="Portrait de Myriam Kühn, développeuse web full-stack">
             </div>
             <div class="pt-2 pb-2">
-              <h2>Qui suis-je ?</h2>
-              <p>
-                Bonjour, je suis <span class="text-danger">Thomas BDC</span>
+              <h2 data-key="about">Qui suis-je ?</h2>
+              <p data-key="aboutDesc1">Bonjour, je suis Myriam Kühn !</p>
+              <p data-key="aboutDesc2">
+                Depuis toujours passionnée par les technologies, j'ai débuté par un Bac Scientifique en Technologie Industrielle avant d'explorer divers chemins professionnels. Il y a 15 ans, j'ai intégré l'univers du jeu vidéo en tant que Community Manager et Social Media Manager, ce qui m'a permis de travailler aux côtés de développeurs et de graphistes. Cette collaboration m'a donné envie de créer mon propre jeu vidéo, que j'ai commencé à développer en autodidacte sur Unreal Engine 5.3.
               </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                <br />
-                <br />
-                Nulla facilisi morbi tempus iaculis urna id volutpat lacus
-                laoreet. Donec ultrices tincidunt arcu non sodales neque. Id
-                aliquet lectus proin nibh nisl. Sagittis orci a scelerisque
-                purus semper. Sit amet consectetur adipiscing elit duis
-                tristique sollicitudin nibh.
-                <br />
-                <br />
-                Integer vitae justo eget magna fermentum. Tellus molestie nunc
-                non blandit. Pellentesque massa placerat duis ultricies lacus
-                sed turpis. Magna eget est lorem ipsum dolor sit amet
-                consectetur.
-                <br />
-                <br />
+              <p data-key="aboutDesc3">
+                Après une période difficile marquée par la perte de mon emploi dans une startup, j'ai entrepris une formation en développement, renforçant mes compétences en web et en applications. Mon expérience chez IONOS en support technique m'a aussi préparée aux défis du déploiement.
               </p>
-              <div>
-                <button class="me-2 btn-social-share btn btn-outline-danger">
+              <p data-key="aboutDesc4">
+                Aujourd'hui, je suis prête à relever de nouveaux défis en tant que développeuse web full-stack et développeuse d'applications. Je suis convaincue que ma polyvalence et ma passion pour les nouvelles technologies me permettront de mener à bien tous les projets qui me seront confiés.
+              </p>
+              <div class="d-flex justify-content-center align-items-center">
+                <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://github.com/MyriamKuhn" target="_blank" data-translate-aria="github">
+                  <i class="bi bi-github"></i>
+                </a>
+                <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://www.linkedin.com/in/myriam-k%C3%BChn/" target="_blank" data-translate-aria="linkedin">
                   <i class="bi bi-linkedin"></i>
-                </button>
-                <button class="me-2 btn-social-share btn btn-outline-danger">
+                </a>
+                <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://www.facebook.com/myriam.kuhn.9" target="_blank" data-translate-aria="facebook">
                   <i class="bi bi-facebook"></i>
-                </button>
-                <button class="me-2 btn-social-share btn btn-outline-danger">
-                  <i class="bi bi-twitter"></i>
-                </button>
-                <button class="me-2 btn-social-share btn btn-outline-danger">
-                  <i class="bi bi-pinterest"></i>
-                </button>
+                </a>
+                <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://x.com/mimkuhn" target="_blank" data-translate-aria="twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a class="btn btn-outline-primary align-content-center align-self-center" href="https://www.instagram.com/myriam_kuhn82/" target="_blank" data-translate-aria="instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -417,9 +391,9 @@
       <!-- Ajout du sélecteur de langue -->
       <div id="language-selector">
         <div class="language-picker d-flex flex-column align-items-center">
-          <button id="fr-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center mb-2" aria-label="Changer la langue en Français">FR</button>
-          <button id="en-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center mb-2" aria-label="Change language to English">EN</button>
-          <button id="de-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center" aria-label="Sprache in Deutsch ändern">DE</button>
+          <button id="fr-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center mb-2 fw-medium" aria-label="Changer la langue en Français">FR</button>
+          <button id="en-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center mb-2 fw-medium" aria-label="Change language to English">EN</button>
+          <button id="de-button" class="btn btn-outline-primary d-flex justify-content-center align-items-center fw-medium" aria-label="Sprache in Deutsch ändern">DE</button>
         </div>
         <div class="setting-button">
           <button class="btn btn-outline-primary" id="showPanelButton" aria-controls="settingsPanel" aria-expanded="false" data-translate-aria="languages">
@@ -434,20 +408,20 @@
     <!-- START : Footer -->
     <footer class="text-center footer-page py-4">
       <div class="my-3">
-        <nav aria-label="Liens vers les réseaux sociaux" class="d-flex justify-content-center">
-          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://github.com/MyriamKuhn" target="_blank" data-translate-aria="github">
+        <nav aria-label="Liens vers les réseaux sociaux" class="d-flex justify-content-center align-items-center">
+          <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://github.com/MyriamKuhn" target="_blank" data-translate-aria="github">
             <i class="bi bi-github"></i>
           </a>
-          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://www.linkedin.com/in/myriam-k%C3%BChn/" target="_blank" data-translate-aria="linkedin">
+          <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://www.linkedin.com/in/myriam-k%C3%BChn/" target="_blank" data-translate-aria="linkedin">
             <i class="bi bi-linkedin"></i>
           </a>
-          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://www.facebook.com/myriam.kuhn.9" target="_blank" data-translate-aria="facebook">
+          <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://www.facebook.com/myriam.kuhn.9" target="_blank" data-translate-aria="facebook">
             <i class="bi bi-facebook"></i>
           </a>
-          <a class="me-2 btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://x.com/mimkuhn" target="_blank" data-translate-aria="twitter">
+          <a class="me-2 btn btn-outline-primary align-content-center align-self-center" href="https://x.com/mimkuhn" target="_blank" data-translate-aria="twitter">
             <i class="bi bi-twitter-x"></i>
           </a>
-          <a class="btn btn-outline-primary d-flex justify-content-center align-items-center" href="https://www.instagram.com/myriam_kuhn82/" target="_blank" data-translate-aria="instagram">
+          <a class="btn btn-outline-primary align-content-center align-self-center" href="https://www.instagram.com/myriam_kuhn82/" target="_blank" data-translate-aria="instagram">
             <i class="bi bi-instagram"></i>
           </a>
         </nav>

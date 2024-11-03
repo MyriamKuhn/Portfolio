@@ -13,6 +13,13 @@ export const translations = {
     protected: "Ce site est protégé par reCAPTCHA.",
     confidency: "Confidentialité",
     conditions: "Conditions",
+		heroDesc1: "Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans la  jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.",
+		heroDesc2: "Venez découvrir mon portfolio !",
+		downloadBtn: "Télécharger mon CV",
+		aboutDesc1: "Bonjour, je suis Myriam Kühn !",
+		aboutDesc2: "Depuis toujours passionnée par les technologies, j'ai débuté par un Bac Scientifique en Technologie Industrielle avant d'explorer divers chemins professionnels. Il y a 15 ans, j'ai intégré l'univers du jeu vidéo en tant que Community Manager et Social Media Manager, ce qui m'a permis de travailler aux côtés de développeurs et de graphistes. Cette collaboration m'a donné envie de créer mon propre jeu vidéo, que j'ai commencé à développer en autodidacte sur Unreal Engine 5.3.",
+		aboutDesc3: "Après une période difficile marquée par la perte de mon emploi dans une startup, j'ai entrepris une formation en développement, renforçant mes compétences en web et en applications. Mon expérience chez IONOS en support technique m'a aussi préparée aux défis du déploiement.",
+		aboutDesc4: "Aujourd'hui, je suis prête à relever de nouveaux défis en tant que développeuse web full-stack et développeuse d'applications. Je suis convaincue que ma polyvalence et ma passion pour les nouvelles technologies me permettront de mener à bien tous les projets qui me seront confiés.",
 		ariaLabels: {
 			nav: "Navigation principale",
 			toggle: "Basculer la navigation",
@@ -23,6 +30,8 @@ export const translations = {
       facebook: "Lien vers Facebook",
       twitter: "Lien vers Twitter",
       github: "Lien vers GitHub",
+			download: "Télécharger mon CV Myriam Kühn au format PDF",
+			nextSection: "Aller à la section suivante",
 		}
 	},
 	en: {
@@ -39,6 +48,13 @@ export const translations = {
     protected: "This website is protected by reCAPTCHA.",
     confidency: "Privacy",
     conditions: "Conditions",
+		heroDesc1: "I'm a full-stack web and application developer specializing in video games, but that doesn't mean I can't create modern, interactive websites and applications.",
+		heroDesc2: "Come and discover my portfolio!",
+		downloadBtn: "Download my resume",
+		aboutDesc1: "Hello, I'm Myriam Kühn!",
+		aboutDesc2: "I've always had a passion for technology, and started out with a Scientific Baccalaureate in Industrial Technology before exploring various career paths. 15 years ago, I entered the world of video games as a Community Manager and Social Media Manager, working alongside developers and graphic designers. This collaboration inspired me to create my own video game, which I started developing on my own using Unreal Engine 5.3.",
+		aboutDesc3: "After a difficult period marked by the loss of my job at a startup, I undertook training in development, reinforcing my web and application skills. My experience at IONOS in technical support also prepared me for the challenges of deployment.",
+		aboutDesc4: "Today, I'm ready to take on new challenges as a full-stack web and application developer. I'm convinced that my versatility and passion for new technologies will enable me to successfully complete all the projects entrusted to me.",
 		ariaLabels: {
 			nav: "Main navigation",
 			toggle: "Toggle navigation",
@@ -49,6 +65,8 @@ export const translations = {
       facebook: "Link to Facebook",
       twitter: "Link to Twitter",
       github: "Link to GitHub",
+			download: "Download my CV Myriam Kühn in PDF format",
+			nextSection: "Go to next section",
 		}
 	},
   de: {
@@ -65,6 +83,13 @@ export const translations = {
     protected: "Diese Website ist durch reCAPTCHA geschützt.",
     confidency: "Datenschutz",
     conditions: "Allgemeine Bedingungen",
+		heroDesc1: "Ich bin eine Full-Stack-Webentwicklerin und Anwendungsentwicklerin, die sich auf Videospiele spezialisiert hat, aber das heißt nicht, dass ich nicht in der Lage wäre, moderne und interaktive Websites oder Anwendungen zu erstellen.",
+		heroDesc2: "Entdecken Sie mein Portfolio!",
+		downloadBtn: "Lebenslauf herunterladen",
+		aboutDesc1: "Guten Tag, ich bin Myriam Kühn!",
+		aboutDesc2: "Ich war schon immer technikbegeistert und habe mit einem wissenschaftlichen Abitur in Industrietechnologie begonnen, bevor ich verschiedene berufliche Wege eingeschlagen habe. Vor 15 Jahren bin ich als Community Managerin und Social Media Managerin in die Welt der Videospiele eingestiegen, wo ich mit Entwicklern und Grafikern zusammenarbeiten konnte. Diese Zusammenarbeit weckte in mir den Wunsch, ein eigenes Videospiel zu entwickeln, das ich als Autodidakt auf Unreal Engine 5.3 zu entwickeln begann.",
+		aboutDesc3: "Nach einer schwierigen Zeit, in der ich meinen Job bei einem Startup-Unternehmen verloren hatte, begann ich eine Ausbildung im Bereich Entwicklung und baute meine Web- und Anwendungskenntnisse aus. Meine Erfahrung bei IONOS im technischen Support bereitete mich außerdem auf die Herausforderungen des Deployments vor.",
+		aboutDesc4: "Heute bin ich bereit, mich neuen Herausforderungen als Full-Stack-Webentwicklerin und Anwendungsentwicklerin zu stellen. Ich bin überzeugt, dass meine Vielseitigkeit und meine Leidenschaft für neue Technologien es mir ermöglichen werden, alle mir anvertrauten Projekte erfolgreich abzuschließen.",
 		ariaLabels: {
 			nav: "Hauptnavigation",
 			toggle: "Navigation umschalten",
@@ -75,6 +100,8 @@ export const translations = {
       facebook: "Link zu Facebook",
       twitter: "Link zu Twitter",
       github: "Link zu GitHub",
+			download: "Meinen Lebenslauf Myriam Kühn im PDF-Format herunterladen",
+			nextSection: "Zum nächsten Abschnitt springen",
 		}
 	}
 };

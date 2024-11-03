@@ -5,6 +5,29 @@
   background-size: cover
   background-repeat: no-repeat
 
-#text-presentation 
-  background-color: #000000bd
-  margin-top: -100px
+  &-presentation
+    background-color: #000000bd
+    margin-top: -100px
+
+  &-name
+    font-family: "Montserrat", sans-serif
+
+  &-description
+    max-width: 50vw
+    align-self: center
+
+  &-btn
+    position: absolute
+    bottom: 30px
+    transform: translateX(-50%)
+    color: #E3F2FD
+    font-size: 5rem
+    animation: arrow 1s ease-in-out infinite
+
+@keyframes arrow 
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(10px)
+  100%
+    transform: translateY(0)
