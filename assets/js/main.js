@@ -3,7 +3,6 @@
 /* IMPORTS */
 
 /***********/
-
 import { translations } from '/assets/js/translations.js';
 
 
@@ -105,6 +104,7 @@ function updateLanguage(lang) {
 		localStorage.setItem('language', lang);
 	}
 }
+
 /**
  * @param {string} lang - La langue à changer
  * @returns {void}
