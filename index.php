@@ -852,9 +852,59 @@ if (isset($_SESSION['form_message'])) {
       <div class="text-center" data-key="footer">
         ©2024 Myrian Kühn - Tous droits réservés
       </div>
-      <a href="" class="text-uppercase fw-medium" data-key="legal">Mentions légales</a>
+      <a href="" class="text-uppercase fw-medium" data-bs-toggle="modal" data-bs-target="#legalModal" data-key="legal">Mentions légales</a>
     </footer>
     <!-- END : Footer -->
+
+    <!-- START : Modal legal -->
+    <div class="modal fade" id="legalModal" tabindex="-1" aria-labelledby="legalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="dialog" aria-modal="true">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="legalTitle" data-key="legalTitle">Mentions légales</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" data-translate-aria="close"></button>
+          </div>
+          <div class="modal-body">
+            <h3 data-key="legalResponisble">Responsable de publication</h3>
+            <ul class="list-unstyled">
+              <li>Myriam Kühn</li>
+              <li><a href="mailto:contact@myriamkuhn.com" data-translate-aria="sendEmail">contact@myriamkuhn.com</a></li>
+            </ul>
+            <h3 data-key="legalPublisher">Hébergeur</h3>
+            <ul class="list-unstyled">
+              <li>IONOS SARL</li>
+              <li>7, place de la Gare - BP 70109 - 57200 Sarreguemines Cedex (France)</li>
+              <li><a href="https://www.ionos.fr/" target="_blank" data-translate-aria="openUrl">https://www.ionos.fr/</a></li>
+            </ul>
+            <h3 data-key="legalIntel">Propriété intellectuelle</h3>
+            <p data-key="legalIntelDesc">Tous les éléments présents sur ce site (textes, images, logos, etc.) sont la propriété exclusive de Myriam Kühn, sauf mention contraire. Toute reproduction, distribution, modification ou utilisation de ces éléments sans autorisation préalable est interdite.</p>
+            <h3 data-key="legalPrivate">Données personnelles</h3>
+            <p data-key="legalPrivateDesc">Dans le cadre de l'utilisation du formulaire de contact, certaines informations personnelles sont collectées, notamment l'adresse e-mail et l'adresse IP des utilisateurs. Ces données sont recueillies dans le but de permettre le traitement des messages envoyés et de répondre aux sollicitations.</p>
+            <ul>
+              <li data-key="legalPrivateDesc1">Utilisation de reCAPTCHA : Ce site utilise reCAPTCHA pour protéger le formulaire de contact contre les abus. reCAPTCHA est un service fourni par Google, et son utilisation est soumise aux Conditions d'utilisation de Google et à leur Politique de confidentialité.</li>
+              <li data-key="legalPrivateDesc2">Finalité des données collectées : Les données recueillies via le formulaire de contact sont utilisées uniquement pour le traitement des demandes d'information ou de contact et ne sont en aucun cas cédées à des tiers à des fins commerciales.</li>
+              <li data-key="legalPrivateDesc3">Conservation des données : Les données collectées via le formulaire de contact sont conservées pendant une durée de 3 ans à compter de la réception du message, puis supprimées.</li>
+              <li data-key="legalPrivateDesc4">Droits des utilisateurs : Conformément à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD) du 27 avril 2016, les utilisateurs disposent d'un droit d'accès, de rectification, de suppression et d'opposition aux données les concernant. Pour exercer ces droits, il suffit de contacter le responsable de publication par e-mail à l'adresse indiquée ci-dessus.</li>
+              <li data-key="legalPrivateDesc5">Recours : Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à l'autorité de protection des données de votre pays (en France, la CNIL).</li>
+            </ul>
+            <h3>Cookies</h3>
+            <p data-key="legalCookiesDesc1">Ce site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic. Les cookies sont des fichiers stockés sur le navigateur de l'utilisateur et permettent de reconnaître son terminal lorsqu'il revient sur le site. Ils sont utilisés pour mémoriser les préférences de l'utilisateur, mesurer l'audience du site et proposer des contenus personnalisés. Ils permettent le bon fonctionnement site, notamment en lien avec reCAPTCHA.</p>
+            <p data-key="legalCookiesDesc2">Les utilisateurs peuvent désactiver les cookies en modifiant les paramètres de leur navigateur. Cependant, certaines fonctionnalités du site peuvent ne pas fonctionner correctement en cas de désactivation des cookies.</p>
+            <h3 data-key="legalExtLinks">Liens externes</h3>
+            <p data-key="legalExtLinksDesc">Ce site contient des liens vers des sites externes. Myriam Kühn n'est pas responsable du contenu de ces sites ni des éventuels dommages causés par leur utilisation. Les utilisateurs sont invités à consulter les politiques de confidentialité et de sécurité des sites tiers avant de les visiter.</p>
+            <h3 data-key="legalUpdate">Modification des mentions légales</h3>
+            <p data-key="legalUpdateDesc">Myriam Kühn se réserve le droit de modifier les présentes mentions légales à tout moment et sans préavis. Il est recommandé aux utilisateurs de consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.</p>
+            <h3 data-key="legalLimit">Limitation de responsabilité</h3>
+            <p data-key="legalLimitDesc">Ce site est mis à jour régulièrement, mais des erreurs ou des omissions peuvent subsister. Myriam Kühn ne saurait être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary text-uppercase fw-medium" data-bs-dismiss="modal" data-translate-aria="close" data-key="legalClose">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END : Modal legal -->
+
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
