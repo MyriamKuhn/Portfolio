@@ -1,3 +1,35 @@
+<?php
+// Configuration des paramètres des cookies de session
+session_set_cookie_params([
+  'lifetime' => 0, // expire à la fermeture du navigateur
+  'path' => '/',
+  'domain' => $_SERVER['SERVER_NAME'],
+  //'secure' => true,
+  'httponly' => true,
+  'samesite' => 'Strict' 
+]);
+
+// Démarrage de la session
+session_start();
+
+// Vérification de l'existence du jeton CSRF dans la session et génération d'un nouveau jeton si nécessaire
+if (empty($_SESSION['csrf_token'])) {
+  $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); 
+}
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Vérification si il s'agit d'une redirection venant du formulaire de contact pour afficher le message de confirmation
+if (isset($_SESSION['form_message'])) {
+  setcookie('form_message', 'response is sended', time() + 60, '/');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -18,8 +50,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="/assets/css/main.min.css" />
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <!-- START : Body -->
@@ -692,15 +722,15 @@
       <!-- CONTACT -->
       <section class="py-5 text-center" id="contact">
         <div class="container py-5">
-          <h2 class="pb-3">Contact</h2>
-          <p>
+          <h2 data-key="contactTitle" class="pb-3">Me contacter</h2>
+          <p data-key="contactDesc">
             N'hésitez pas à me contacter pour toute question, collaboration ou simplement pour échanger autour de nos passions créatives et digitales.
           </p>
           <div class="row row-cols-1 row-cols-md-3 px-3">
             <div class="contact-container">
               <div class="contact-header">
                 <i class="bi bi-telephone-fill text-primary mb-1"></i>
-                <h3 class="fw-medium">Appelez-moi</h3>
+                <h3 class="fw-medium" data-key="contactCall">Appelez-moi</h3>
               </div>
               <div class="contact-body">
                 <a class="fw-medium" href="tel:+33682499706">+33 6 82 49 97 06</a>
@@ -709,7 +739,7 @@
             <div class="contact-container">
               <div class="contact-header">
                 <i class="bi bi-envelope-fill text-primary mb-1"></i>
-                <h3 class="fw-medium">Mail</h3>
+                <h3 class="fw-medium" data-key="contactMail">EMail</h3>
               </div>
               <div class="contact-body">
                 <a class="text-uppercase fw-medium" href="mailto:contact@myriamkuhn.com?subject=Je vous contacte depuis votre site">contact@myriamkuhn.com</a>
@@ -718,17 +748,61 @@
             <div class="contact-container">
               <div class="contact-header">
                 <i class="bi bi-house-fill text-primary mb-1"></i>
-                <h3 class="fw-medium">Chez moi</h3>
+                <h3 class="fw-medium" data-key="contactHome">Chez moi</h3>
               </div>
               <div class="contact-body">
                 <a class="text-uppercase fw-medium" href="https://fr.mappy.com/plan/57230-bitche">57230 Bitche, FRANCE</a>
               </div>
             </div>
-
-
-
-
           </div>
+          <h3 class="mt-5" data-key="contactSendMe">Envoyez-moi un message</h3>
+          <p class="mb-5" data-key="contactAnswer">Je vous répondrai dans les plus brefs délais.</p>
+          <?php 
+            if (isset($_SESSION['form_message'])):
+              $message = $_SESSION['form_message'];
+              if ($alertType = $message['type'] === 'success'): ?>
+                <div class="alert alert-success" role="alert" id="successMessage" data-key="successMessage">
+                  Votre message a bien été envoyé. Merci !
+                </div>
+              <?php else: ?>
+                <div class="alert alert-danger" role="alert" id="errorMessage" data-key="errorMessage">
+                  Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.
+                </div>
+              <?php endif;
+              unset($_SESSION['form_message']);
+            endif ?>
+          <form id="contactForm" action="/App/sendContact.php" method="post" class="needs-validation" novalidate>
+          <input type="hidden" id="csrf_token" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+            <div class="input-group mb-3">
+              <label for="name" class="input-group-text" data-key="contactName">Nom</label>
+              <input type="text" class="form-control" id="name" name="name" required aria-describedby="nameFeedback" minlength="3" maxlength="100">
+              <div id="nameFeedback" class="invalid-feedback" aria-live="assertive" data-key="errorName">
+                Entrez un nom valide.
+              </div>        
+            </div>
+            <div class="input-group mb-3">
+              <label for="email" class="input-group-text" data-key="contactMail">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailFeedback">
+              <div id="emailFeedback" class="invalid-feedback" aria-live="assertive" data-key="errorMail">
+                Entrez une adresse mail valide.
+              </div> 
+            </div>
+            <div class="input-group mb-3">
+              <label for="subject" class="input-group-text" data-key="contactSubject">Objet</label>
+              <input type="text" class="form-control" id="subject" name="subject" required aria-describedby="subjectFeedback" minlength="10" maxlength="200">
+              <div id="subjectFeedback" class="invalid-feedback" aria-live="assertive" data-key="errorSubject">
+                Entrez un objet valide.
+              </div> 
+            </div>
+            <div class="input-group mb-3">
+              <label for="message" class="input-group-text" data-key="contactMessage">Message</label>
+              <textarea class="form-control" id="message" name="message" required rows="5" aria-describedby="messageFeedback" minlength="50"></textarea>
+              <div id="messageFeedback" class="invalid-feedback" aria-live="assertive" data-key="errorMessage">
+                Entrez un message valide.
+              </div> 
+            </div>
+            <button type="submit" class="btn btn-primary text-uppercase fw-medium g-recaptcha" data-sitekey="<?= $_ENV['SITE_RECAPTCHA_KEY'] ?>" data-callback='onSubmit' data-key="contactSend">Envoyer</button>
+          </form>
         </div>
       </section>
 
@@ -779,15 +853,10 @@
         ©2024 Myrian Kühn - Tous droits réservés
       </div>
       <a href="" class="text-uppercase fw-medium" data-key="legal">Mentions légales</a>
-      <div class="text-center mt-5">
-        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="Protégé par reCAPTCHA" width="25">
-        <p data-key="protected" class="fs-6 m-0">Ce site est protégé par reCAPTCHA.</p>
-        <a href="https://www.google.com/intl/fr/policies/privacy/" class="text-uppercase fw-medium" target="_blank" rel="noopener noreferrer" data-key="confidency">Confidentialité</a> - 
-        <a href="https://www.google.com/intl/fr/policies/terms/" class="text-uppercase fw-medium" target="_blank" rel="noopener noreferrer" data-key="conditions">Conditions</a>
-      </div>
     </footer>
     <!-- END : Footer -->
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
   </body>

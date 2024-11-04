@@ -14,20 +14,20 @@ import { translations } from '/assets/js/translations.js';
 const scrollTopButton = document.getElementById("scrollTopButton");
 const hero = document.getElementById("hero");
 
-// Crée un observateur pour gérer l'apparition et la disparition de la section hero
+// Création d'un observateur pour la gestion de l'apparition et de la disparition d'une section à l'écran
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
-			// Hero est de nouveau visible sur l'écran
+			// la section est de nouveau visible sur l'écran
 			scrollTopButton.classList.remove("showing"); 
 		} else {
-			// Hero a quitté l'écran
+			// la section a quitté l'écran
 			scrollTopButton.classList.add("showing"); 
 		}
 	});
-}, { threshold: 0 }); // 0 signifie que l'observation est déclenchée dès qu'une petite portion de l'élément entre ou sort de l'écran
+}, { threshold: 0 }); // l'observation est déclenchée dès qu'une petite portion de l'élément entre ou sort de l'écran
 
-// Observer la section hero
+// Observation de la section hero pour afficher ou masquer le bouton de retour en haut
 observer.observe(hero);
 
 // Nettoyer l'observateur pour éviter les fuites de mémoire
@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	} else if (path.startsWith('/de')) {
 		lang = 'de';
 	} else {
-	const userLang = navigator.language || navigator.userLanguage; // Détecte la langue du navigateur
-	const lang = userLang.startsWith('fr') ? 'fr' : userLang.startsWith('de') ? 'de' : 'en'; 
+		const userLang = navigator.language || navigator.userLanguage;
+		lang = userLang.startsWith('fr') ? 'fr' : userLang.startsWith('de') ? 'de' : 'en';
 	}
 
 	// Vérifie si une langue est déjà sauvegardée et valide
@@ -83,6 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Création des liens de traduction pour le SEO
 	const baseDomain = window.location.origin;
 	addLanguageLinks(baseDomain);
+
+	// Fonction pour récupérer la valeur d'un cookie par son nom
+	function getCookie(name) {
+		const value = `; ${document.cookie}`;
+		const parts = value.split(`; ${name}=`);
+		if (parts.length === 2) return parts.pop().split(';').shift();
+	}
+
+	const formMessage = getCookie('form_message');
+	if (formMessage) {
+		const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+		document.cookie = "form_message=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	}
 });
 
 
@@ -100,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateLanguage(lang) {
 	// Mise à jour de la langue si elle est valide
 	if (['en', 'fr', 'de'].includes(lang)) {
-		changeLanguage(lang);
 		localStorage.setItem('language', lang);
+		changeLanguage(lang);
 	}
 }
 
@@ -206,3 +222,31 @@ function showPanelLanguage() {
 }
 
 langButton.addEventListener('click', showPanelLanguage);
+
+
+
+
+
+// Fonction appelée après le reCAPTCHA
+window.onSubmit = function(token) {
+	const form = document.getElementById('contactForm');
+	
+	// Ajoute `was-validated` pour afficher les messages d’erreur si les champs ne sont pas valides
+	form.classList.add('was-validated');
+	
+	// Vérifie si le formulaire est valide
+	if (form.checkValidity()) {
+		form.submit(); // Soumet le formulaire si tout est valide
+	} else {
+		// Réinitialise le reCAPTCHA si le formulaire n'est pas valide
+		grecaptcha.reset();
+	}
+}
+
+// Intercepte la soumission du formulaire
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+	event.preventDefault(); // Empêche la soumission par défaut
+
+	// Lance le reCAPTCHA
+	grecaptcha.execute();
+});
