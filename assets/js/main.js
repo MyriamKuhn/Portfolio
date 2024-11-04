@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const savedLang = localStorage.getItem('language');
 	lang = supportedLangs.includes(savedLang) ? savedLang : lang;
 
-	// Met à jour la langue
 	changeLanguage(lang);
 
 	// Gestion des boutons de changement de langue
@@ -84,13 +83,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	const baseDomain = window.location.origin;
 	addLanguageLinks(baseDomain);
 
-	// Fonction pour récupérer la valeur d'un cookie par son nom
+	/**
+	 * @param {string} name - Le nom du cookie
+	 * @returns {string} La valeur du cookie
+	 * 
+	 * @description Récupère la valeur d'un cookie
+	 */
 	function getCookie(name) {
 		const value = `; ${document.cookie}`;
 		const parts = value.split(`; ${name}=`);
 		if (parts.length === 2) return parts.pop().split(';').shift();
 	}
 
+	// Vérifie si un message de formulaire est présent dans les cookie, scroll jusqu'à la section contact et supprime le cookie
 	const formMessage = getCookie('form_message');
 	if (formMessage) {
 		const contactSection = document.getElementById('contact');
@@ -214,6 +219,11 @@ function addLanguageLinks(baseDomain) {
 /***********************/
 const langButton = document.getElementById('showPanelButton');
 
+/**
+ * @returns {void}
+ * 
+ * @description Affiche ou masque le panneau de sélection de langue
+ */
 function showPanelLanguage() {
 	const panel = document.getElementById("language-selector");
 	const expanded = panel.style.left === "0px";
@@ -224,10 +234,18 @@ function showPanelLanguage() {
 langButton.addEventListener('click', showPanelLanguage);
 
 
+/**************/
 
+/* FORMULAIRE */
 
-
-// Fonction appelée après le reCAPTCHA
+/**************/
+/**
+ * @param {string} token - Le jeton reCAPTCHA
+ * @returns {void}
+ * 
+ * @description Soumet le formulaire si les champs sont valides et réinitialise le reCAPTCHA si le formulaire n'est pas valide
+ * Il est appelé par le reCAPTCHA	après avoir vérifié le jeton reCAPTCHA, c'est la fonction de callback de Google reCAPTCHA
+ */
 window.onSubmit = function(token) {
 	const form = document.getElementById('contactForm');
 	
@@ -243,10 +261,9 @@ window.onSubmit = function(token) {
 	}
 }
 
-// Intercepte la soumission du formulaire
+// Ecoute la soumission du formulaire
 document.getElementById('contactForm').addEventListener('submit', function (event) {
-	event.preventDefault(); // Empêche la soumission par défaut
-
+	event.preventDefault(); 
 	// Lance le reCAPTCHA
 	grecaptcha.execute();
 });
