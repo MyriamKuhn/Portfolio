@@ -15,7 +15,7 @@ export const translations = {
     protected: "Ce site est protégé par reCAPTCHA.",
     confidency: "Confidentialité",
     conditions: "Conditions",
-		heroDesc1: "Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans la  jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.",
+		heroDesc1: "Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans le jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.",
 		heroDesc2: "Venez découvrir mon portfolio !",
 		downloadBtn: "Télécharger mon CV",
 		aboutDesc1: "Bonjour, je suis Myriam Kühn !",
