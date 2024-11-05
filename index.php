@@ -103,7 +103,7 @@ if (isset($_SESSION['form_message'])) {
             <div class="d-flex justify-content-center flex-column align-items-center text-center hero-presentation">
               <h1 id="hero-title" class="hero-name text-uppercase fw-medium text-primary">Myriam Kühn</h1>
               <p class="hero-description m-0 text-center" data-key="heroDesc1">
-                Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans la  jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.
+                Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans le jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.
               </p>
               <p class="hero-description text-center mt-2" data-key="heroDesc2">
                 Venez découvrir mon portfolio !
