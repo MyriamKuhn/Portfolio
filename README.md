@@ -124,7 +124,7 @@ Start your web server and navigate to your local instance of the application.
 - [Docker](https://www.docker.com/) - Application containerization
 ## Deployed Application
 
-[https://gamestore.mkcodecreations.dev/](https://gamestore.mkcodecreations.dev/)
+[https://myriamkuhn.com/](https://myriamkuhn.com/)
 
 
 ## Feedback
