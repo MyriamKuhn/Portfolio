@@ -108,7 +108,7 @@ if (isset($_SESSION['form_message'])) {
               <p class="hero-description text-center mt-2" data-key="heroDesc2">
                 Venez découvrir mon portfolio !
               </p>
-              <a href="/assets/docs/cv_myriamkuehn.pdf" target="_blank" class="btn btn-primary text-uppercase fw-medium mt-5 text-light" data-translate-aria="download" data-key="downloadBtn">Télécharger mon CV</a>
+              <a href="/assets/docs/CV-MyriamKuhn.pdf" target="_blank" class="btn btn-primary text-uppercase fw-medium mt-5 text-light" data-translate-aria="download" data-key="downloadBtn">Télécharger mon CV</a>
               <a href="#about" class="hero-btn" data-translate-aria="nextSection"><i class="bi bi-arrow-down-short"></i></a>
             </div>
           </div>
@@ -478,6 +478,25 @@ if (isset($_SESSION['form_message'])) {
                   </div>
                 </div>
               </div>
+              <!-- MANTIS -->
+              <div class="p-3">
+                <div class="card bg-transparent text-dark border-secondary h-100" role="article">
+                  <img src="/assets/img/logo-mantis.png" class="mx-auto my-3" data-translate-alt="mantisImg"/>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Mantis Bug Tracker</h5>
+                    <p class="card-text" data-key="mantisDesc">
+                      Expérience dans l'utilisation de Mantis Bug Tracker pour le suivi des tickets et la gestion des bugs, offrant une organisation optimale et facilitant le suivi des corrections.
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-secondary text-secondary">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
               <!-- FIGMA -->
               <div class="p-3">
                 <div class="card bg-transparent text-dark border-secondary h-100" role="article">
@@ -683,6 +702,12 @@ if (isset($_SESSION['form_message'])) {
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -704,6 +729,48 @@ if (isset($_SESSION['form_message'])) {
                   <div class="py-3">
                     <a href="https://myriamkuhn.com" target="_blank" class="text-uppercase fw-medium" data-translate-aria="portfolioLabel">Mon portfolio</a>
                     <p data-key="realisations3">Le site sur lequel vous vous trouvez actuellement (HTML/CSS/SASS/JS/Bootstrap/PHP)</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/perspective.png" class="w-50" data-translate-alt="perspectiveImg">
+                  <div class="py-3">
+                    <a href="/assets/img/realisations/medieval.pdf" target="_blank" class="text-uppercase fw-medium" data-translate-aria="perspectiveLabel" data-key="realisation4Title">Dessin de perspective</a>
+                    <p data-key="realisations4">Dessin de perspective réalisée aux feutres noirs avec traits de construction apparents</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/illustration.png" class="w-50" data-translate-alt="illustrationImg">
+                  <div class="py-3">
+                    <a href="/assets/img/realisations/illua4.pdf" target="_blank" class="text-uppercase fw-medium" data-translate-aria="illustrationLabel" data-key="realisation5Title">Illustration numérique</a>
+                    <p data-key="realisations5">Illustration numérique réalisée avec Adobe Illustrator et Adobe Photoshop</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/dessin-analytique.png" class="w-50" data-translate-alt="dessinImg">
+                  <div class="py-3">
+                    <a href="/assets/img/realisations/chaussure.png" target="_blank" class="text-uppercase fw-medium" data-translate-aria="dessinLabel" data-key="realisation6Title">Dessin analytique</a>
+                    <p data-key="realisations6">Dessin analytique réalisé sur Adobe Photoshop</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/miniatures.png" class="w-50" data-translate-alt="miniImg">
+                  <div class="py-3">
+                    <a href="/assets/img/realisations/pompiers-mini.jpg" target="_blank" class="text-uppercase fw-medium" data-translate-aria="miniLabel" data-key="realisation7Title">Composition photo et personnages miniatures</a>
+                    <p data-key="realisations7">Composition photo et personnages miniatures dessinés sur Adobe Photoshop</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/logoSargane.png" class="w-50" data-translate-alt="sarganeImg">
+                  <div class="py-3">
+                    <a href="/assets/img/realisations/enseigne_Sargane.jpg" target="_blank" class="text-uppercase fw-medium" data-translate-aria="sarganeLabel" data-key="realisation8Title">Logo pour la Sargane</a>
+                    <p data-key="realisations8">Logo réalisé pour la Sargane, pâtisserie artisanale</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/logo-magie.png" class="w-50" data-translate-alt="magieImg">
+                  <div class="py-3">
+                    <a href="/assets/img/realisations/logo_mes.jpg" target="_blank" class="text-uppercase fw-medium" data-translate-aria="magieLabel" data-key="realisation9Title">Logo pour le musée de la magie</a>
+                    <p data-key="realisations9">Logo réalisé pour le musée de la magie</p>
                   </div>
               </div>
             </div>
