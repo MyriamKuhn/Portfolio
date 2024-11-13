@@ -4,7 +4,7 @@ session_set_cookie_params([
   'lifetime' => 0, // expire à la fermeture du navigateur
   'path' => '/',
   'domain' => $_SERVER['SERVER_NAME'],
-  //'secure' => true,
+  'secure' => true,
   'httponly' => true,
   'samesite' => 'Strict' 
 ]);
