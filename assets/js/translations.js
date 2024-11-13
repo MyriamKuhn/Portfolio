@@ -73,6 +73,8 @@ export const translations = {
 		realisations8: "Logo réalisé pour la Sargane, pâtisserie artisanale",
 		realisation9Title: "Logo pour le musée de la magie",
 		realisations9: "Logo réalisé pour le musée de la magie",
+		realisations10: "Projet personnel - Site de gestion de liens favoris passant par une API REST-FULL (HTML/CSS/JS/Bootstrap/PHP/MySQL)",
+		realisations11: "Projet personnel - API REST-FULL (HTML/CSS/JS/PHP/MySQL)",
 		previous: "Précédent",
 		next: "Suivant",
 		successMessage: "Votre message a bien été envoyé. Merci !",
@@ -128,6 +130,8 @@ export const translations = {
 			gamestoreLabel: "Voir le projet Gamestore sur un site externe",
 			lunarplayLabel: "Voir le projet LunarPlay System sur un site externe",
 			portfolioLabel: "Voir le projet Portfolio sur un site externe",
+			favsphereLabel: "Voir le projet Favsphere sur un site externe",
+			apiLabel: "Voir le projet API REST-FULL sur un site externe",
 			perspectiveLabel: "Voir la perspective en format PDF",
 			illustrationLabel: "Voir l'illustration en format PDF",
 			dessinLabel: "Voir le dessin analytique en format PNG",
@@ -175,6 +179,8 @@ export const translations = {
 			miniImg: "Prévisualisation d'une composition photo et personnages miniatures dessinés sur Adobe Photoshop",
 			sarganeImg: "Prévisualisation du logo réalisé pour la Sargane",
 			magieImg: "Prévisualisation du logo réalisé pour le musée de la magie",
+			favsphereImg: "Capture d'écran de la page d'accueil du site de Favsphere",
+			apiImg: "Capture d'écran de la page d'accueil du site de l'API REST-FULL",
 		}
 	},
 	en: {
@@ -251,6 +257,8 @@ export const translations = {
 		realisations8: "Logo created for Sargane, an artisanal patisserie",
 		realisation9Title: "Logo for the magic museum",
 		realisations9: "Logo designed for the Museum of Magic",
+		realisations10: "Personal project - Favorite links management website using a REST-FULL API (HTML/CSS/JS/Bootstrap/PHP/MySQL)",
+		realisations11: "Personal project - REST-FULL API (HTML/CSS/JS/PHP/MySQL)",
 		previous: "Previous",
 		next: "Next",
 		successMessage: "Your message has been sent. Thank you very much!",
@@ -306,6 +314,8 @@ export const translations = {
 			gamestoreLabel: "See the Gamestore project on an external site",
 			lunarplayLabel: "See the LunarPlay System project on an external site",
 			portfolioLabel: "See the Portfolio project on an external site",
+			favsphereLabel: "See the Favsphere project on an external site",
+			apiLabel: "See the REST-FULL API project on an external site",
 			perspectiveLabel: "View the perspective in PDF format",
 			illustrationLabel: "View illustration in PDF format",
 			dessinLabel: "See the analytical drawing in PNG format",
@@ -353,6 +363,8 @@ export const translations = {
 			miniImg: "Preview of a photo composition and miniature characters drawn in Adobe Photoshop",
 			sarganeImg: "Preview of the logo created for Sargane",
 			magieImg: "Preview of the logo created for the Museum of Magic",
+			favsphereImg: "Screenshot of Favsphere home page",
+			apiImg: "Screenshot of REST-FULL API home page",
 		}
 	},
   de: {
@@ -429,6 +441,8 @@ export const translations = {
 		realisations8: "Logo erstellt für die Sargane, eine handwerkliche Konditorei",
 		realisation9Title: "Logo für das Museum der Magie",
 		realisations9: "Logo, das für das Museum der Magie entworfen wurde",
+		realisations10: "Persönliches Projekt - Website zur Verwaltung von Favoritenlinks über eine REST-FULL API (HTML/CSS/JS/Bootstrap/PHP/MySQL)",
+		realisations11: "Persönliches Projekt - REST-FULL API (HTML/CSS/JS/PHP/MySQL)",
 		previous: "Vorheriges",
 		next: "Nächste",
 		successMessage: "Ihre Nachricht wurde erfolgreich gesendet. Danke!",
@@ -485,6 +499,8 @@ export const translations = {
 			gamestoreLabel: "Das Gamestore-Projekt auf einer externen Website ansehen",
 			lunarplayLabel: "Das Projekt LunarPlay System auf einer externen Website ansehen",
 			portfolioLabel: "Portfolio-Projekt auf einer externen Website ansehen",
+			favsphereLabel: "Das Favsphere-Projekt auf einer externen Website ansehen",
+			apiLabel: "Das REST-FULL API-Projekt auf einer externen Website ansehen",
 			perspectiveLabel: "Perspektive im PDF-Format ansehen",
 			illustrationLabel: "Illustration im PDF-Format ansehen",
 			dessinLabel: "Analytische Zeichnung im PNG-Format ansehen",
@@ -532,6 +548,8 @@ export const translations = {
 			miniImg: "Vorschau einer Fotokomposition und gezeichnete Miniaturfiguren in Adobe Photoshop",
 			sarganeImg: "Vorschau des für die Sargane erstellten Logos",
 			magieImg: "Vorschau des für das Zaubermuseum entworfenen Logos",
+			favsphereImg: "Screenshot der Startseite von Favsphere",
+			apiImg: "Screenshot der Startseite der REST-FULL API",
 		}
 	}
 };
