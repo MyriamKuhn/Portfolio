@@ -729,7 +729,7 @@ if (isset($_SESSION['form_message'])) {
               <div class="carousel-item">
                 <img src="/assets/img/realisations/favsphere.png" class="w-50" data-translate-alt="favsphereImg">
                   <div class="py-3">
-                    <a href="https://favsphere.myriamkuhn.com/" target="_blank" class="text-uppercase fw-medium" data-translate-aria="favsphereLabel">FavSphere</a>
+                    <a href="https://favsphere.myriamkuhn.com" target="_blank" class="text-uppercase fw-medium" data-translate-aria="favsphereLabel">FavSphere</a>
                     <p data-key="realisations10">Projet personnel - Site de gestion de liens favoris passant par une API REST-FULL (HTML/CSS/JS/Bootstrap/PHP/MySQL)</p>
                   </div>
               </div>
