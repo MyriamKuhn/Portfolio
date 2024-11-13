@@ -736,14 +736,14 @@ if (isset($_SESSION['form_message'])) {
               <div class="carousel-item">
                 <img src="/assets/img/realisations/api.png" class="w-50" data-translate-alt="apiImg">
                   <div class="py-3">
-                    <a href="https://favsphere.myriamkuhn.com/app/" target="_blank" class="text-uppercase fw-medium" data-translate-aria="apiLabel">FavSphere API</a>
+                    <a href="https://favsphere.myriamkuhn.com/App/swagger/" target="_blank" class="text-uppercase fw-medium" data-translate-aria="apiLabel">FavSphere API</a>
                     <p data-key="realisations11">Projet personnel - API REST-FULL (HTML/CSS/JS/PHP/MySQL)</p>
                   </div>
               </div>
               <div class="carousel-item">
                 <img src="/assets/img/realisations/portfolio.png" class="w-50" data-translate-alt="portfolioImg">
                   <div class="py-3">
-                    <a href="https://myriamkuhn.com" target="_blank" class="text-uppercase fw-medium" data-translate-aria="portfolioLabel">Mon portfolio</a>
+                    <a href="https://myriamkuhn.com" target="_blank" class="text-uppercase fw-medium" data-translate-aria="portfolioLabel">Portfolio</a>
                     <p data-key="realisations3">Le site sur lequel vous vous trouvez actuellement (HTML/CSS/SASS/JS/Bootstrap/PHP)</p>
                   </div>
               </div>
