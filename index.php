@@ -103,7 +103,7 @@ if (isset($_SESSION['form_message'])) {
             <div class="d-flex justify-content-center flex-column align-items-center text-center hero-presentation">
               <h1 id="hero-title" class="hero-name text-uppercase fw-medium text-primary">Myriam Kühn</h1>
               <p class="hero-description m-0 text-center" data-key="heroDesc1">
-                Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans la  jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.
+                Je suis une développeuse web full-stack et développeuse d'applications spécialisée dans le jeu vidéo mais ce n'est pas pour autant que je ne suis pas capable de réaliser des sites web ou des applications modernes et interactifs.
               </p>
               <p class="hero-description text-center mt-2" data-key="heroDesc2">
                 Venez découvrir mon portfolio !
@@ -708,6 +708,8 @@ if (isset($_SESSION['form_message'])) {
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -722,6 +724,20 @@ if (isset($_SESSION['form_message'])) {
                   <div class="py-3">
                     <a href="https://lunarplay-system.mkcodecreations.dev/" target="_blank" class="text-uppercase fw-medium" data-translate-aria="lunarplayLabel">LunarPlay System</a>
                     <p data-key="realisations2">Projet personnel - Site de mini-jeux avec classement (HTML/CSS/JS/Three.js/PHASER/PHP/MongoDB)</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/favsphere.png" class="w-50" data-translate-alt="favsphereImg">
+                  <div class="py-3">
+                    <a href="https://favsphere.myriamkuhn.com/" target="_blank" class="text-uppercase fw-medium" data-translate-aria="favsphereLabel">FavSphere</a>
+                    <p data-key="realisations10">Projet personnel - Site de gestion de liens favoris passant par une API REST-FULL (HTML/CSS/JS/Bootstrap/PHP/MySQL)</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/realisations/api.png" class="w-50" data-translate-alt="apiImg">
+                  <div class="py-3">
+                    <a href="https://favsphere.myriamkuhn.com/app/" target="_blank" class="text-uppercase fw-medium" data-translate-aria="apiLabel">FavSphere API</a>
+                    <p data-key="realisations11">Projet personnel - API REST-FULL (HTML/CSS/JS/PHP/MySQL)</p>
                   </div>
               </div>
               <div class="carousel-item">
